@@ -31,8 +31,8 @@ public class JDBC {
     /**
      * attributi utili per il collegamento con il server
      */
-    private final String usernameDB = "domenico";
-    private final String passwordDB = "root";
+    private final String usernameDB = "ph1l";
+    private final String passwordDB = "D3v1l98";
     private final String urlDB = "jdbc:h2:tcp://localhost/~/test";
     private static JDBC instanceJdbc = null;
 
