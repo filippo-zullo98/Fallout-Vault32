@@ -38,6 +38,9 @@ public class GamePanel extends JPanel implements Runnable{
     int playerY = 100;
     int playerSpeed = 4;
 
+    // FPS
+    int FPS = 60;
+
 
     // costruttore del pannello di gioco
     public GamePanel() {
@@ -56,30 +59,43 @@ public class GamePanel extends JPanel implements Runnable{
 
     @Override
     public void run() { // metodo che viene chiamato da Thread per avviare il processo concorrente (thread)
+        double drawInterval = 1000000000/FPS;
+        double nextDrawTime = System.nanoTime() + drawInterval;
         // Creo qui un ciclo di gioco, che sarà il fulcro del gioco
-        while(gameThread != null) {
-            System.out.println("The game loop is running");
+        while (gameThread != null) {
             // elenco operazioni del thread
             // 1 AGGIORNAMENTO: aggiorna informazioni come la posizione dei personaggi
             update();
             // 2 DISEGNO: disegna sullo schermo con le informazioni aggiornate
             repaint();
+
+            try {
+                double remainingTime = nextDrawTime - System.nanoTime();
+                remainingTime /= 1000000;
+                if (remainingTime < 0) {
+                    remainingTime = 0;
+                }
+                Thread.sleep((long) remainingTime);
+                nextDrawTime += drawInterval;
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
     // creo il metodo dedicato all'operazione 1 di aggiornamento
     // i valori X aumentano lo spostamento a dx
     // i valori Y aumentano lo spostamento in basso
     public void update() {
-        if(keyH.upPressed == true) {
+        if (keyH.upPressed == true) {
             playerY -= playerSpeed;
         }
-        else if(keyH.downPressed == true) {
+        else if (keyH.downPressed == true) {
             playerY += playerSpeed;
         }
-        else if(keyH.leftPressed == true){
+        else if (keyH.leftPressed == true){
             playerX -= playerSpeed;
         }
-        else if(keyH.rightPressed == true) {
+        else if (keyH.rightPressed == true) {
             playerX += playerSpeed;
         }
     }
