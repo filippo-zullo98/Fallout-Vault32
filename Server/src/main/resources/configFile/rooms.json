@@ -1,0 +1,263 @@
+{
+  "Alloggio personale":
+  [{
+    "type": 0,
+    "id": 0,
+    "descrizione" : "È un alloggio standard, non troppo grande ma abbastanza confortevole. Le pareti, in acciaio rinforzato, sono decorate con vecchie foto di famiglia. \nAl centro della stanza c’è un tavolo rotondo e una piccola cucina.\nAl lato, il letto con un piccolo comodino in metallo, il cassetto è leggermente aperto.\nDalla finestrella della porta blindata entra un fascio di luce.\n",
+    "isLock" : false,
+    "piano": 5,
+    "directions" : [{
+      "left": 1
+    }]
+  }],
+
+  "Corridoio piano 5":
+  [{
+    "type": 0,
+    "id": 1,
+    "descrizione" : "Il corridoio è uno spazio claustrofobico, le pareti sono rivestite in spesse lastre di metallo.\nDavanti scorgo la porta che conduce verso la mensa.\nSu entrambi i lati sono disposti gli alloggi dei residenti del Vault. Sembrano essere chiusi tutti dall’interno.\nDa qualche parte sento qualcuno piangere. Deve essere successo qualcosa di grave…\n",
+    "isLock" : false,
+    "piano": 5,
+    "directions" : [{
+      "left": 3,
+      "right": 0,
+      "up": 2,
+      "down": 4
+
+
+    }]
+  }],
+
+  "Mensa":
+  [{
+    "type": 0,
+    "id": 2,
+    "descrizione" : "La mensa è in una stanza molto grande. I tavoli sono disposti in lunghe file ordinate e l’ambiente è mantenuto pulito dal sistema di pulizia automatico.\nAll’apparenza sembra essere tutto normale eppure percepisco qualcosa di strano…\nL’ambiente sembra essere stato sgomberato in tutta fretta, nei piatti è ancora presente la colazione.\nIn fondo, vicino ai tavoli, il corpo di Robert, il mio vicino di casa, immerso in una pozza di sangue. È stato ucciso da qualcuno con una coltellata al petto…\n",
+    "isLock" : false,
+    "piano": 5,
+    "directions" : [{
+      "down": 1
+    }]
+  }],
+
+  "Alloggio Bloccato":
+  [{
+    "type": 0,
+    "id": 3,
+    "descrizione" : "L’alloggio è identico al mio. La disposizione dei mobili è molto simile.\nRobert era un maniaco dell’ordine, non c’è una cosa fuori posto: la cucina pulita e il letto è stato rifatto da poco.\nVicino alla porta principale c’è un armadietto…\n",
+    "isLock" : [{
+      "objectLock": 1,
+      "descriptionLock": "L'alloggio è bloccato utilizza la chiave per accedere"
+    }],
+    "piano": 5,
+    "directions" : [{
+      "right": 1
+    }]
+  }],
+
+  "Ascensore5":
+  [{
+    "type": 1,
+    "id": 4,
+    "descrizione" : "L’ascensore è molto spazioso permettendo lo spostamento di un grosso numero di persone o di merce. A destra, vicino la porta, c’è il pannello di controllo, per spostarsi sui vari piani.",
+    "isLock" : [{
+      "objectLock": 2,
+      "descriptionLock": "C'è un malfunzionamento elettrico all'ascensore, risolvi il guasto per utilizzare l'ascensore"
+    }],
+    "piano" : 5,
+    "directions" : [{
+      "up": 1,
+      "sali": 5
+    }]
+  }],
+
+  "Ascensore4":
+  [{
+    "type": 1,
+    "id": 5,
+    "descrizione" : "L’ascensore è molto spazioso permettendo lo spostamento di un grosso numero di persone o di merce. A destra, vicino la porta, c’è il pannello di controllo, per spostarsi sui vari piani.",
+    "isLock" : [{
+      "objectLock": 1234,
+      "descriptionLock": "L'ascensore è bloccato, utilizza il codice segreto per accedere ai piani superiori"
+    }],
+    "piano": 4,
+    "directions" : [{
+      "scendi" : 4,
+      "sali": 10,
+      "up": 6
+    }]
+  }],
+
+  "Corridoio piano 4":
+  [{
+    "type": 0,
+    "id": 6,
+    "descrizione" : "Il corridoio porta a tre diversi ambienti: a destra la Libreria, a sinistra l’Aula Scuola e davanti la Clinica.\nIl silenzio innaturale viene rotto da un fioco lamento, sembra una donna…\n",
+    "isLock": false,
+    "piano": 4,
+    "directions" : [{
+      "left": 8,
+      "right": 7,
+      "up": 9,
+      "down": 5
+    }]
+  }],
+
+  "Libreria":
+  [{
+    "type": 0,
+    "id": 7,
+    "descrizione" : "La libreria è divisa in due ambienti.\nA sinistra c’è una lunga fila di scaffali piena di libri, molti sono vecchi e logori.\nA destra sono stati posizionati alcuni terminali.\n",
+    "isLock": false,
+    "piano": 4,
+    "directions" : [{
+      "left": 6
+    }]
+  }],
+
+  "Aula scuola":
+  [{
+    "type": 0,
+    "id": 8,
+    "descrizione" : "È una stanza abbastanza stretta ma molto lunga, le due file di banchi disposti ai lati della stanza portano alla cattedra, posta in fondo alla stanza.\nDei lamenti provengono da dietro la scrivania: una ragazza ferita. Sembra essere in gravi condizioni…\n",
+    "isLock": false,
+    "piano": 4,
+    "directions" : [{
+      "right": 6
+    }]
+  }],
+
+  "Clinica":
+  [{
+    "type": 0,
+    "id": 9,
+    "descrizione" : "L’ambiente è pulito e funzionale.\nL’aria ha un leggero odore di disinfettante e tutte le superfici sono estremamente pulite.\nA sinistra sono presenti alcune brandine mentre a destra ci sono degli armadietti con bende e medicinali.\n",
+    "isLock": false,
+    "piano": 4,
+    "directions" : [{
+      "down": 6
+    }]
+  }],
+
+  "Ascensore3":
+  [{
+    "type": 1,
+    "id": 10,
+    "descrizione" : "L’ascensore è molto spazioso permettendo lo spostamento di un grosso numero di persone o di merce. A destra, vicino la porta, c’è il pannello di controllo, per spostarsi sui vari piani.",
+    "isLock" : false,
+    "piano": 3,
+    "directions" : [{
+      "up": 11,
+      "sali": 14,
+      "scendi": 5
+    }]
+  }],
+
+  "Corridoio piano 3":
+  [{
+    "type": 0,
+    "id": 11,
+    "descrizione" : "Non sono mai stato su questo livello. A destra sembra esserci l’entrata del Deposito, mentre a sinistra c’è la porta blindata che conduce all’Armeria. Il sistema di areazione emette un fastidioso ronzio, la lampada al neon si accende ad intermittenza, segno che sta per rompersi. Non sembra essere un luogo molto frequentato…",
+    "isLock": false,
+    "piano": 3,
+    "directions" : [{
+      "right": 12,
+      "left": 13,
+      "down": 10
+    }]
+  }],
+
+  "Deposito":
+  [{
+    "type": 0,
+    "id": 12,
+    "descrizione" : "L’ambiente è estremante polveroso, non ci entra nessuno da tanto. Ci sono scatoloni sparsi per tutta la stanza. Sulla sinistra c’è una fila di armadi con sopra poggiati attrezzi da lavoro e divise.",
+    "piano": 3,
+    "isLock": false,
+    "directions" : [{
+      "left": 11
+    }]
+  }],
+
+  "Armeria":
+  [{
+    "type": 0,
+    "id": 13,
+    "descrizione" : "Dietro delle spesse sbarre in acciaio c’è un ricco arsenale d’armi. Ogni fucile, ogni pistola è perfettamente pulita, lubrificata e lucidata.\nAccanto, c’è il terminale che permette l’apertura del cancello.\n",
+    "isLock" : [{
+      "objectLock": 8,
+      "descriptionLock": "Armeria bloccata cerca l'id per accedere"
+    }],
+    "piano": 3,
+    "directions" : [{
+      "right" : 11
+    }]
+  }],
+
+  "Ascensore 2":
+  [{
+    "type": 1,
+    "id": 14,
+    "descrizione" : "L’ascensore è molto spazioso permettendo lo spostamento di un grosso numero di persone o di merce. A destra, vicino la porta, c’è il pannello di controllo, per spostarsi sui vari piani.",
+    "isLock" : false,
+    "piano": 2,
+    "directions" : [{
+      "up": 18,
+      "scendi": 10
+    }]
+  }],
+
+  "Ufficio sovrintendente":
+  [{
+    "type": 0,
+    "id": 15,
+    "descrizione" : "L’ufficio è molto spazioso.\nAl centro è collocata la scrivania del sovrintendente realizzata in acciaio lucidato e legno. La poltrona in pregiata pelle.\nSulla scrivania è montato un terminale personale.\nUn lussuoso parquet riveste il pavimento.\n",
+    "isLock" : false,
+    "piano": 2,
+    "directions" : [{
+      "down": 18,
+      "up": 20
+    }]
+  }],
+  "Porta di uscita dal vault":
+  [{
+    "type": 0,
+    "id": 17,
+    "descrizione" : "L’uscita del Vault è una massiccia struttura circolare in acciaio rinforzato.\nAl centro è inciso il numero del Vault: “32”. Aldilà c’è il mondo esterno, devastato dalla guerra nucleare.\nCosì vicino incute paura…\n",
+    "isLock" : [{
+      "objectLock": -1,
+      "descriptionLock": "La porta di uscita dal Vault è bloccata, forse dal computer nell'ufficio del sovrintendere si può sbloccare"
+    }],
+    "piano": 1,
+    "directions" : [{
+      "down": 19
+    }]
+  }],
+  "Corridoio piano 2":
+  [{
+    "type": 0,
+    "id": 18,
+    "descrizione" : "Un lungo corridoio con in fondo una porta. Oltre di essa c’è l’ufficio del sovrintendente…",
+    "isLock" : [{
+      "objectLock": -1,
+      "descriptionLock": "C’è una squadra di guardiani armata  fino ai denti, protegge l’ufficio del sovrintendente."
+    }],
+    "piano": 2,
+    "directions" : [{
+      "up": 15,
+      "down": 14
+    }]
+  }],
+  "Passaggio segreto":
+  [{
+    "type": 0,
+    "id": 20,
+    "descrizione" : "Questo è un passoggio segreto che porta alla porta del vault",
+    "isLock" : false,
+    "piano": 2,
+    "directions" : [{
+      "up": 17,
+      "down": 15
+    }]
+  }]
+}

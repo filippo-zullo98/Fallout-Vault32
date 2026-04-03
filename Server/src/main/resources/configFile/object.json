@@ -1,0 +1,61 @@
+{
+  "Chiave Elettronica Alloggio Protagonista": [
+    {
+      "id": 0,
+      "furniture": 2,
+      "descrizione" : "Chiave elettronica che apre la porta dell'alloggio del protagonista"
+    }
+  ],
+
+  "Chiave Alloggio": [
+    {
+      "id": 1,
+      "furniture": 3,
+      "descrizione" : "Chiave elettronica che apre la porta dell'alloggio bloccato al piano 5"
+    }
+  ],
+
+  "Fusibile": [
+    {
+      "id": 2,
+      "furniture": 6,
+      "descrizione" : "Fusibile che ripara il guasto dell'ascensore"
+    }
+  ],
+  "Stimpak": [
+    {
+      "id": 4,
+      "furniture": 7,
+      "descrizione" : "Dispositivo medico portatile usato per curare le ferite e rigenerare rapidamente la salute"
+    }
+  ],
+  "Fucile": [
+    {
+      "id": 5,
+      "furniture": 10,
+      "descrizione" : "Arma da fuoco letale, è molto pesante"
+
+    }
+  ],
+  "Computer": [
+  {
+    "id": 6,
+    "furniture": 11,
+    "descrizione" : ""
+  }
+  ],
+  "Libro": [
+    {
+      "id": 7,
+      "furniture": 12,
+      "descrizione" : "Un vecchio libro logoro, dentro c'è un biglietto: '1234'"
+    }
+  ],
+  "Id armeria": [
+    {
+      "id": 8,
+      "furniture": 13,
+      "descrizione" : "Badge di riconoscimento per accedere all'armeria"
+    }
+  ]
+}

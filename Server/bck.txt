@@ -1,0 +1,34 @@
+
+    /**
+     * la funzione serve a prendere l'oggetto passato come parametro
+     * la funzione controlla se l'oggetto si trova all'interno della stanza corrente
+     *
+     * @return boolean --> serve ad indicare se l'oggetto è stato preso o meno
+     */
+    public boolean pickUpObject(String nameObject){
+        for (Furniture furniture : getCurrentRoom().getFurniture()){
+            for (AdvObject object : furniture.listObject()){
+                if (object.equals(nameObject)){
+                    inventario.add(object);
+                    furniture.listObject().remove(object);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    /**
+     * la funzione serve a prendere l'oggetto passato come parametro
+     * la funzione controlla se l'oggetto si trova all'interno della stanza corrente
+     */
+    public void pickUpObject(int idObject){
+        for (Furniture furniture : getCurrentRoom().getFurniture()){
+            for (AdvObject object : furniture.listObject()){
+                if (object.getId() == idObject){
+                    inventario.add(object);
+                    furniture.listObject().remove(object);
+                    return;
+                }
+            }
+        }
+    }

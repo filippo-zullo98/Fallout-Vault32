@@ -1,0 +1,107 @@
+{
+  "Letto Alloggio Protagonista": [
+    {
+      "id": 0,
+      "stanza": 0,
+      "descrizione" : "Letto del protagonista"
+    }
+  ],
+  "Tavolo Alloggio Protagonista": [
+    {
+      "id": 1,
+      "stanza": 0,
+      "descrizione" : "Tavolo del protagonista"
+    }
+  ],
+  "Comodino Alloggio Protagonista": [
+    {
+      "id": 2,
+      "stanza": 0,
+      "descrizione" : "Comodino del protagonista"
+    }
+  ],
+
+  "Robert": [
+    {
+      "id": 3,
+      "stanza": 2,
+      "descrizione": "Abitante del vault 32 che è passato a miglior vita"
+    }
+  ],
+
+  "Tavolo Della Mensa": [
+    {
+      "id": 4,
+      "stanza": 2,
+      "descrizione": "Tavolo della mensa"
+    }
+  ],
+
+  "Letto Alloggio Bloccato": [
+    {
+      "id": 5,
+      "stanza": 3,
+      "descrizione": "Letto alloggio bloccato"
+    }
+  ],
+
+  "Armadietto": [
+    {
+      "id": 6,
+      "stanza": 3,
+      "descrizione": "Armadietto alloggio bloccato"
+    }
+  ],
+
+  "Brandina": [
+    {
+      "id": 7,
+      "stanza": 9,
+      "descrizione": ""
+    }
+  ],
+
+  "infermiera": [
+    {
+      "id": 8,
+      "stanza": 8,
+      "descrizione": "Grazie mi hai salvato la vita, utilizza il codice 1234 per accedere ai piani superiori"
+    }
+  ],
+
+  "guardiani": [
+    {
+      "id": 9,
+      "stanza": 15,
+      "descrizione": ""
+    }
+  ],
+  "Arsenale": [
+    {
+      "id": 10,
+      "stanza": 13,
+      "descrizione": ""
+    }
+  ],
+  "Tavolo": [
+    {
+      "id": 11,
+      "stanza": 15,
+      "descrizione": ""
+    }
+  ],
+  "Scaffali": [
+    {
+      "id": 12,
+      "stanza": 7,
+      "descrizione": ""
+    }
+  ],
+  "Armadio": [
+    {
+      "id": 13,
+      "stanza": 12,
+      "descrizione": ""
+    }
+  ]
+}
