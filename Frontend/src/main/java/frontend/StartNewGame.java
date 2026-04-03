@@ -284,21 +284,25 @@ public class StartNewGame {
         JButton buttonLeft = new JButton("←");
         JButton buttonRight = new JButton("→");
 
+        // Definiamo una dimensione quadrata fissa per i bottoni direzionali
+        Dimension sqSize = new Dimension(50, 50);
+        JButton[] directionalButtons = {buttonUp, buttonDown, buttonLeft, buttonRight};
 
-        // Dimensioni per i pulsanti direzionali sinistra e destra
-        Dimension directionalButtonSize = new Dimension(40, 40);
-        buttonLeft.setPreferredSize(directionalButtonSize);
-        buttonRight.setPreferredSize(directionalButtonSize);
+        for (JButton b : directionalButtons) {
+            b.setPreferredSize(sqSize);
+            b.setMinimumSize(sqSize); // Forza Swing a non rimpicciolirli mai
+            b.setMargin(new Insets(0, 0, 0, 0)); // Rimuove lo spazio interno che causa "..."
+            b.setFocusPainted(false);
+            b.setFont(new Font("Arial", Font.BOLD, 20)); // Font leggermente più grande e leggibile
+        }
 
-        // Dimensioni per i pulsanti direzionali su e giù
-        Dimension upDownButtonSize = new Dimension(40, 40);
-        buttonUp.setPreferredSize(upDownButtonSize);
-        buttonDown.setPreferredSize(upDownButtonSize);
 
-        // Dimensioni per buttonSali e buttonScendi
-        Dimension saliScendiButtonSize = new Dimension(80, 30);
+        // Dimensioni per buttonSali e buttonScendi (HTML richiede più spazio)
+        Dimension saliScendiButtonSize = new Dimension(90, 45);
         buttonSali.setPreferredSize(saliScendiButtonSize);
+        buttonSali.setMinimumSize(saliScendiButtonSize);
         buttonScendi.setPreferredSize(saliScendiButtonSize);
+        buttonScendi.setMinimumSize(saliScendiButtonSize);
 
         // Creazione dell'etichetta per il timer
         timerLabel = new JLabel();
@@ -306,19 +310,14 @@ public class StartNewGame {
         timerLabel.setVisible(false);
         frame.add(timerLabel);
 
-        // Aumenta la dimensione del font per il testo delle frecce
-        buttonUp.setFont(new Font("Arial", Font.BOLD, 18)); // Esempio di aumentare la dimensione del font
-        buttonDown.setFont(new Font("Arial", Font.BOLD, 18));
-        buttonLeft.setFont(new Font("Arial", Font.BOLD, 18));
-        buttonRight.setFont(new Font("Arial", Font.BOLD, 18));
-
-
         buttonSali.setVisible(false);
         buttonScendi.setVisible(false);
 
-        // Configurazione per i bottoni direzionali con GridBagLayout
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(3, 3, 3, 3); // Insets più piccoli per ridurre lo spazio
+        gbc.insets = new Insets(2, 2, 2, 2);
+        gbc.fill = GridBagConstraints.BOTH; // Il bottone occupa tutto lo spazio della cella
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
 
         gbc.gridx = 1;
         gbc.gridy = 0;
@@ -336,6 +335,7 @@ public class StartNewGame {
         gbc.gridy = 1;
         frame.add(buttonRight, gbc);
 
+        // Sali e Scendi a lato
         gbc.gridx = 3;
         gbc.gridy = 0;
         frame.add(buttonSali, gbc);
@@ -344,14 +344,12 @@ public class StartNewGame {
         gbc.gridy = 2;
         frame.add(buttonScendi, gbc);
 
-        // Aggiungo spazio aggiuntivo tra i bottoni direzionali
+        // Spazio vuoto centrale per mantenere la forma a croce
         gbc.gridx = 3;
         gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.VERTICAL; // Riempi lo spazio verticalmente
-        gbc.weighty = 1.0; // Peso per l'altezza (espande verticalmente)
-        frame.add(Box.createRigidArea(new Dimension(10, 10)), gbc); // Spazio aggiuntivo tra i bottoni
+        frame.add(Box.createRigidArea(new Dimension(10, 10)), gbc);
 
-        // Aggiungo i listener agli ascoltatori di azione per i bottoni direzionali
+        // Action Listeners
         buttonUp.addActionListener(e -> handleButtonClick("/up"));
         buttonDown.addActionListener(e -> handleButtonClick("/down"));
         buttonLeft.addActionListener(e -> handleButtonClick("/left"));

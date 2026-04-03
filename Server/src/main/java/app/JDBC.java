@@ -2,6 +2,9 @@ package app;
 
 import app.type.AdvObject;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,13 +44,23 @@ public class JDBC {
      */
     private JDBC() throws SQLException {
         Properties dbprops = new Properties();
-        dbprops.setProperty("user", usernameDB);
-        dbprops.setProperty("password", passwordDB);
-        connection = DriverManager.getConnection(urlDB,dbprops);
-        stm = connection.createStatement();
-        createTableUser();  // tenta di creare la tabella se essa non esiste già
-        createTableInventario();    // tenta di creare la tabella se essa non esiste già
-        createTableUnlockroom();    // tenta di creare la tabella se essa non esiste già
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+            if (input == null) {
+                System.out.println("Spiacente, config.properties non trovato. Uso i default.");
+                dbprops.setProperty("user", "");
+                dbprops.setProperty("password", "");
+            } else {
+                dbprops.load(input);
+                // Mappiamo le chiavi del file properties alle chiavi attese da H2
+                dbprops.setProperty("user", dbprops.getProperty("db.user"));
+                dbprops.setProperty("password", dbprops.getProperty("db.password"));
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        connection = DriverManager.getConnection(urlDB, dbprops); //
+        stm = connection.createStatement(); //
     }
 
     /**
