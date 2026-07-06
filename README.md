@@ -2,13 +2,13 @@
 Progetto per l'esame di Metodi Avanzati di Programmazione (MAP)
 Università degli Studi di Bari "Aldo Moro"
 
-## 📝 Descrizione del Progetto
+## Descrizione del Progetto
 
 Fallout-Vault32 è un'avventura testuale a interfaccia grafica ispirata all'universo post-apocalittico di Fallout. Il progetto implementa un'architettura Client-Server per la gestione di un gioco di ruolo in cui l'utente deve esplorare stanze, raccogliere oggetti e interagire con l'ambiente per fuggire dal Vault 32.
 
 Il software è stato sviluppato come progetto finale per il corso di Metodi Avanzati di Programmazione, focalizzandosi sull'utilizzo della programmazione concorrente, programmazione di rete e gestione dei dati tramite database SQL.
 
-## 🛠️ Tecnologie Utilizzate
+## Tecnologie Utilizzate
  
 
   - Linguaggio: Java 21
@@ -21,7 +21,7 @@ Il software è stato sviluppato come progetto finale per il corso di Metodi Avan
 
   - Build Tool: Maven
 
-## 🏛️ Architettura e Design Pattern
+## Architettura e Design Pattern
 
 Il progetto segue una struttura modulare suddivisa in:
 
@@ -37,7 +37,7 @@ Il progetto segue una struttura modulare suddivisa in:
 
   - Strategy/Command: Per il parsing dei comandi utente.
 
-## 🚀 Come Iniziare
+## Come Iniziare
 
 **Prerequisiti**
 
@@ -71,7 +71,7 @@ Il progetto segue una struttura modulare suddivisa in:
     <pre>
      mvn exec:java -Dexec.mainClass="frontend.RootFrame"
     </pre>
-## ✒️ Autori
+## Autori
 A cura di:
 - Palmisano Domenico
 - Zullo Filippo
